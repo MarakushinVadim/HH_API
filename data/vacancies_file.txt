@@ -1,3 +1,0 @@
-Разработчик Python, https://hh.ru/vacancy/93463349, None, Широкий опыт разработки на <highlighttext>Python</highlighttext> (3.x) от 2х лет. Опыт проектирования и развития REST API. Git на уровне... 
-Верстальщик Junior Web разработчик, https://hh.ru/vacancy/93555006, {'from': 450, 'to': 1000, 'currency': 'USD', 'gross': False}, JS (На базовом уровне). PHP (На базовом уровне). Большим плюсом будет: Навыки работы с GIT и серверами на базе Linux. 
-Python Developer (backend), https://hh.ru/vacancy/93643682, None, Строить собственную ИИ платформу. 
