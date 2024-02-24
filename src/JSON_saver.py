@@ -4,14 +4,13 @@ from abc import ABC, abstractmethod
 class Save(ABC):
 
     @abstractmethod
-    def add_vacancy(self, vacancy):
-        with open('data/vacancies_file.txt', 'a', encoding='UTF-8') as file:
+    def add_vacancy(self, vacancy, path):
+        with open(path, 'a', encoding='UTF-8') as file:
             file.write(vacancy)
 
 
     @abstractmethod
-    def delete_vacancy(self, vacancy):
-        path = 'data/vacancies_file.txt'
+    def delete_vacancy(self, vacancy, path):
         with open(path, 'r', encoding='UTF-8') as deleted:
             deleted = deleted.readlines()
             del_obj = f'{vacancy.name}, {vacancy.url}, {vacancy.salary}, {vacancy.requirement} \n'
@@ -27,13 +26,12 @@ class Save(ABC):
 class JSONSaver(Save):
 
 
-    def add_vacancy(self, vacancy):
-        with open('data/vacancies_file.txt', 'a', encoding='UTF-8') as file:
+    def add_vacancy(self, vacancy, path):
+        with open(path, 'a', encoding='UTF-8') as file:
             file.write(f'{vacancy.name}, {vacancy.url}, {vacancy.salary}, {vacancy.requirement} \n')
 
 
-    def delete_vacancy(self, vacancy):
-        path = 'data/vacancies_file.txt'
+    def delete_vacancy(self, vacancy, path):  #Переделать
         with open(path, 'r', encoding='UTF-8') as deleted:
             deleted = deleted.readlines()
             del_obj = f'{vacancy.name}, {vacancy.url}, {vacancy.salary}, {vacancy.requirement} \n'
