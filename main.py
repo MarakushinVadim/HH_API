@@ -41,18 +41,3 @@ if __name__ == '__main__':
 
     while menu.x is True:
         menu.main_menu()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
