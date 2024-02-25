@@ -101,7 +101,9 @@ class Vacancy:
         '''
         salary_list = []
         for vacancy in vacancies_list:
-            if min_salary <= int(vacancy.salary['to']) < max_salary:
+            if min_salary > max_salary:
+                max_salary = min_salary
+            if min_salary <= int(vacancy.salary['to']) <= max_salary:
                 salary_list.append(vacancy)
         return salary_list
 

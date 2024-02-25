@@ -31,12 +31,11 @@ class JSONSaver(Save):
             file.write(f'{vacancy.name}, {vacancy.url}, {vacancy.salary}, {vacancy.requirement} \n')
 
 
-    def delete_vacancy(self, vacancy, path):  #Переделать
+    def delete_vacancy(self, vacancy, path):
         with open(path, 'r', encoding='UTF-8') as deleted:
             deleted = deleted.readlines()
-            del_obj = f'{vacancy.name}, {vacancy.url}, {vacancy.salary}, {vacancy.requirement} \n'
             for object in deleted:
-                if del_obj in object:
+                if vacancy in object:
                     deleted.remove(object)
         with open(path, 'w', encoding='UTF-8') as file:
             for string in deleted:
