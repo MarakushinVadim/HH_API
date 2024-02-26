@@ -1,5 +1,6 @@
 from src.JSON_saver import JSONSaver
 
+
 class Menu:
 
     def __init__(self, vacancies_list, top_n_vac, filtred_vac, fiter_sal, x):

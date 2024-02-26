@@ -21,6 +21,11 @@ class HeadHunterAPI(API):
 
 
     def get_vacancies(self, search):
+        '''
+
+        :param search: вводим название для поиска
+        :return: данные для создания обьектов класса Vakancy
+        '''
         search_params = {
             'area': 113,  # Поиск в России
             'per_page': 100,  # Кол-во вакансий на 1 странице
@@ -42,6 +47,7 @@ class Vacancy:
 
     def cast_to_object_list(vacancies_obj):
         '''
+        vacancies_obj: данные для создания обьектов класса Vakancy
         :return: отсортированный по зарплатам список вакансий в кол-ве 100 штук
         '''
         vacancies_list = []

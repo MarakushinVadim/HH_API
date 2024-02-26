@@ -1,6 +1,6 @@
 from src.HeadHunterAPI import HeadHunterAPI, Vacancy
 from src.JSON_saver import JSONSaver
-from src.func import Menu
+from src.Menu import Menu
 
 if __name__ == '__main__':
     platforms = ['HeadHunter']

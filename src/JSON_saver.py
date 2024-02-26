@@ -27,11 +27,21 @@ class JSONSaver(Save):
 
 
     def add_vacancy(self, vacancy, path):
+        '''
+        :param vacancy: обьект класса Vacancy
+        :param path: путь к файлу в который идет сохранение
+        :return: сохраняет данные в файл
+        '''
         with open(path, 'a', encoding='UTF-8') as file:
             file.write(f'{vacancy.name}, {vacancy.url}, {vacancy.salary}, {vacancy.requirement} \n')
 
 
     def delete_vacancy(self, vacancy, path):
+        '''
+        :param vacancy: обьект класса Vacancy в виде строки в файле
+        :param path: путь к файлу
+        :return: удаляет строку из файла
+        '''
         with open(path, 'r', encoding='UTF-8') as deleted:
             deleted = deleted.readlines()
             for object in deleted:
