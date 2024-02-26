@@ -12,6 +12,10 @@ class Menu:
         self.x = x
 
     def main_menu(self):
+        '''
+        :return: главное меню, при неправильном выборе завершает программу
+        '''
+
         print(f''' 
 Для навигации используйте цифровые значения
 
@@ -51,6 +55,10 @@ class Menu:
 
 
     def get_all_vacancy(self):
+        '''
+        :return: просмотр списка всех вакансий
+        '''
+
         if len(self.vacancies_list) < 1:
             print('по данным критериям ничего не найдено')
 
@@ -77,6 +85,10 @@ class Menu:
 
 
     def get_top_vacancy(self):
+        '''
+        :return:  просмотр списка топ вакансий
+        '''
+
         if len(self.top_n_vac) < 1:
             print('по данным критериям ничего не найдено')
         for object in self.top_n_vac:
@@ -102,6 +114,10 @@ class Menu:
 
 
     def get_filtred_vac(self):
+        '''
+        :return: просмотр списка вакансий по ключевым словам
+        '''
+
         if len(self.filtred_vac) < 1:
             print('по данным критериям ничего не найдено')
         for object in self.filtred_vac:
@@ -127,6 +143,9 @@ class Menu:
 
 
     def get_fiter_sal(self):
+        '''
+        :return: отфильтрованный по указанным значениям з/п список
+        '''
         if len(self.fiter_sal) < 1:
             print('по данным критериям ничего не найдено')
         for object in self.fiter_sal:
@@ -152,6 +171,9 @@ class Menu:
 
 
     def watch_favorite(self):
+        '''
+        :return: просмотр и редактирование списка избранных вакансий
+        '''
         print(f'''
 1 - просмотреть весь список
 2 - просмотр и редактирование списка по одной позиции
